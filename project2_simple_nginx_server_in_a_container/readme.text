@@ -1,0 +1,89 @@
+# NGINX Docker Container
+
+A simple Docker project that serves a static HTML page using NGINX.
+
+The application uses the official NGINX image and copies a custom `index.html` page into the default NGINX web root directory.
+
+---
+
+## How It Works
+
+* Uses the official NGINX Docker image.
+* Copies the custom HTML page into the NGINX document root.
+* NGINX serves the page on port 80 inside the container.
+
+---
+
+## Build the Docker Image
+
+```bash
+docker build -t test-nginx:v1 .
+```
+
+---
+
+## Run the Container
+
+```bash
+docker run -d -p 8080:80 test-nginx:v1
+```
+
+### Port Mapping
+
+```text
+Host Port      Container Port
+8080      ->   80
+```
+
+Open a browser and navigate to:
+
+```text
+http://localhost:8080
+```
+
+---
+
+## Verify the Container
+
+List running containers:
+
+```bash
+docker ps
+```
+
+View container logs:
+
+```bash
+docker logs <container-id>
+```
+
+---
+
+## Stop the Container
+
+```bash
+docker stop <container-id>
+```
+
+---
+
+## Learning Objectives
+
+This project demonstrates:
+
+* Docker image creation
+* Container execution
+* NGINX web server basics
+* Static website hosting
+* Docker port mapping
+* Customizing container content
+
+---
+
+## Technologies Used
+
+* Docker
+* NGINX
+* HTML
+
+Note: ReadMe by ChatGPT
